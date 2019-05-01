@@ -15,13 +15,13 @@
 
 
       <label for="selectedCurrency">Select a Currency:</label>
-      <select id="selectedCurrency" v-model="selectedCurrency">
+      <select id="selectedCurrency" v-model="currencySelected">
         <option disabled value="">Select a currency</option>
-        <option v-for="(rate, key) in rates" :value="selectedCurrency">{{key}}: {{rate}}</option>
+        <option v-for="(rate, key) in rates" :value="rate">{{key}}: {{rate}}</option>
       </select>
 
       <div id="selectedCurrency" :value="selectedCurrency">
-        <h2>{{euroEntry}} will give you {{totalEuro}}</h2>
+        <h2>€{{euroEntry}} will give you {{euroToEntry}}</h2>
       </div>
 
 

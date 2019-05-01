@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       euroEntry: 0,
-      
       selectedCurrency: "",
+      currencySelected: "",
       rates: {
       },
       totalEuro: 0,
@@ -23,11 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     computed: {
       euroToEntry: function(){
-        console.log(this.euroEntry);
-        console.log(selectedCurrency.rate);
+        return (this.euroEntry * this.currencySelected).toFixed(2);
 
-        totalEuro = this.euroEntry * this.selectedCurrency.rates.value;
-        return totalEuro;
       },
     }
   })
